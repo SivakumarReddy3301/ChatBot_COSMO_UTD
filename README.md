@@ -21,3 +21,8 @@ and enables natural language interaction through a React-based UI and an LLM-pow
 - Chat bubble widget with animated UI
 - Avatars and typing indicators for enhanced UX
 - Real-time connection to backend
+
+# Architecture Diagram
+
+
+![image](https://github.com/user-attachments/assets/283cef65-4d7f-4266-bfee-6d253a1584b7)
