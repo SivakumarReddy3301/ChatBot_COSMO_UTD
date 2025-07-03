@@ -1,0 +1,5 @@
+llama_index.llms.huggingface_api
+llama_index.embeddings.jinaai
+llama_index.postprocessor.jinaai_rerank
+fastapi
+uvicorn

@@ -1,0 +1,5 @@
+scrapy
+pymongo
+scrapy-playwright
+bs4
+tqdm

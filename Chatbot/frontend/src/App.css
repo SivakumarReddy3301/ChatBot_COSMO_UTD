@@ -1,0 +1,215 @@
+body, .demo-page {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .demo-page {
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    position: relative;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 36, 27, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .landing-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Floating COSMO logo */
+  .cosmo-logo {
+    width: 1000px;
+    height: auto;
+    animation: float 4s ease-in-out infinite;
+    margin-bottom: 10px;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+  
+  .content {
+    margin-top: 0;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .content h1 {
+    font-size: 2.8rem;
+    color: #f47c20;
+    margin: 0;
+  }
+  
+  .content p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-top: 10px;
+  }
+  
+  /* Chat bubble trigger */
+  .chat-bubble {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 32px;
+    background-color: #f47c20;
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 55px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+  
+  /* Chat Window */
+  .chat-window {
+    position: fixed;
+    bottom: 85px;
+    right: 20px;
+    width: 420px;
+    max-height: 700px;       /* ⛔ max cap */
+    min-height: 200px;       /* ✅ minimum */
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(244, 124, 32, 0.4);
+    border: 2px solid #f47c20;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }  
+  
+  .messages {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f7f7f7;
+  }
+  
+  .message-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+  
+  .message-row.user {
+    justify-content: flex-end;
+  }
+  
+  .message-row.bot {
+    justify-content: flex-start;
+  }
+  
+  .avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 4px;
+  }
+  
+  .message {
+    max-width: 75%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    line-height: 1.5;
+    font-size: 14px;
+    white-space: pre-wrap;
+    font-weight: 500;
+    text-align: left;
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+
+  }
+  
+  .message.user {
+    background-color: #f4a261; /* darker, warm orange */
+    color: #2f1b00;
+    border-top-right-radius: 0;
+  }
+    
+  .message.bot {
+    background-color: #92c894; /* medium-dark green */
+    color: #003114;
+    border-top-left-radius: 0;
+  }
+  
+  
+  .typing-indicator {
+    font-style: italic;
+    opacity: 0.8;
+  }
+  
+  .dots::after {
+    content: '';
+    display: inline-block;
+    animation: dots 1s steps(3, end) infinite;
+    width: 1em;
+    text-align: left;
+  }
+  
+  @keyframes dots {
+    0%   { content: ''; }
+    33%  { content: '.'; }
+    66%  { content: '..'; }
+    100% { content: '...'; }
+  }
+  
+  .input {
+    display: flex;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background: white;
+  }
+  
+  .input input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  
+  .input button {
+    background-color: #006341;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .input button:hover {
+    background-color: #00472d;
+  }
+  
+  .message a {
+    color: #004c99;
+    text-decoration: underline;
+    word-break: break-word;
+    display: inline;
+  }
+  
+  
